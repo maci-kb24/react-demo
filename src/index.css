@@ -12,6 +12,8 @@
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   height:100%;
+  font: normal normal normal 1rem/1.6 -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 1rem;
 }
 
 /* Sections
@@ -24,6 +26,7 @@
 body {
   margin: 0;
   min-height:100%;
+  color: #404040;
 }
 
 /**
@@ -349,7 +352,52 @@ template {
 [hidden] {
   display: none;
 }
+.container {
+  padding:0 1rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+.container h3 {
+  font-size:26px;
+  line-height: 34px;
+}
 
 table {
-  height:400px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+  max-width: 100%;
+  margin:0 0 1.5rem;
+}
+thead th {
+  text-align: left;
+  padding:.5rem;
+  border-bottom: 2px solid #dedede;
+  font-size:16px;
+  line-height: 26px;
+}
+button {
+  display: inline-block;
+  border: 1px solid #0366ee;
+  border-radius: 4px;
+  background: #0366ee;
+  color: #fff;
+  font-weight: 600;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  text-transform: none;
+  padding: .75rem 1.25rem;
+  margin: 0 0 .5rem;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+}
+button:focus {
+  border: 1px solid #0366ee;
+}
+button:hover {
+  background: #0250bc;
+  border: 1px solid #0250bc;
 }

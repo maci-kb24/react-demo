@@ -1,31 +1,48 @@
 import React, {Component} from 'react'
-import Table from './Table'
+import Table from './components/Table'
 
 class App extends Component {
-    render() {
+  
+  state = {
+    characters: [
+      {
+        name: 'Charlie',
+        job: 'Janitor'
+      },
+      {
+        name: 'Mac',
+        job: 'Web IT'
+      }
+    ]
+  };
+  
+  removeCharacter = (index) => {
+    const { characters } = this.state
+  
+    this.setState({
+      characters: characters.filter((character, i) => {
+        return i !== index
+      })
+    });
+  } 
 
-      const characters = [
-        {
-          name: 'Mark',
-          job: 'UI Developer',
-        },
-        {
-          name: 'Mac',
-          job: 'Front End Developer',
-        },
-        {
-          name: 'Dee',
-          job: 'Actress',
-        },
-        {
-          name: 'Dennis',
-          job: 'Bartender',
-        }
-      ]
+  handleSubmit = character => {
+    this.setState({characters: [...this.state.characters, character]});
+  }
 
-      return(
+  render() {
+
+    const { characters } = this.state;
+
+    return (
         <div className="container">
-          <Table characterData={characters} />
+          <h1>React Form</h1>
+          <p>Add a character with a name and a job to the table.</p>
+          <Table 
+            characterData={characters} 
+            removeCharacter={this.removeCharacter} 
+          />
+          <h3>Add New</h3>
         </div>
       )
     }
