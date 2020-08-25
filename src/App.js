@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Table from './components/Table'
-import Form from './components/Form/index';
+import Form from './components/Form';
 
 class App extends Component {
 
