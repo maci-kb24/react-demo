@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from './Table.module.css';
 
 const TableHeader = () => {
     return (
-        <thead>
+        <thead className={styles.thead}>
             <tr>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Remove</th>
+                <th className={styles.th}>Name</th>
+                <th className={styles.th}>Job</th>
+                <th className={styles.th}>Remove</th>
             </tr>
          </thead>
     )
@@ -20,7 +21,7 @@ const TableBody = (props) => {
                 <td>{row.name}</td>
                 <td>{row.job}</td>
                 <td>
-                    <button onClick={() => props.removeCharacter(index)}>Delete</button>
+                    <button onClick={() => props.removeCharacter(index)} className={styles.button}>Delete</button>
                 </td>
             </tr>
         )
@@ -36,7 +37,7 @@ const Table = (props) => {
     const {characterData, removeCharacter} = props
 
     return (
-        <table className="table">
+        <table className={styles.table}>
             <TableHeader />
             <TableBody characterData={characterData} removeCharacter={removeCharacter} />
         </table>

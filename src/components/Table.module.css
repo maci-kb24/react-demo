@@ -1,0 +1,39 @@
+.button {
+    display: inline-block;
+    border: 1px solid #0366ee;
+    border-radius: 4px;
+    background: #0366ee;
+    color: #fff;
+    font-weight: 600;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    text-transform: none;
+    padding: .75rem 1.25rem;
+    margin: 0 0 .5rem;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .button:focus {
+    border: 1px solid #0366ee;
+  }
+  .button:hover {
+    background: #0250bc;
+    border: 1px solid #0250bc;
+  }
+  .table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width:100%;
+    max-width: 100%;
+    margin:0 0 1.5rem;
+  }
+  .thead .th {
+    text-align: left;
+    padding:.5rem;
+    border-bottom: 2px solid #dedede;
+    font-size:16px;
+    line-height: 26px;
+  }
